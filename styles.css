@@ -11,20 +11,18 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Style the title */
 .title {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* Style the navigation bar */
 .navbar {
-    display: flex;
-    gap: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
 
 /* Style the navigation items */
@@ -32,8 +30,6 @@ header {
     padding: 10px;
     text-decoration: none;
     color: #fff;
-    background-color: #f00;
-    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
@@ -41,6 +37,17 @@ header {
 .nav-item.active {
     background-color: #fff;
     color: #333;
+}
+
+/* Center the navigation items horizontally */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 10px;
 }
 
 /* Media query for responsiveness */
