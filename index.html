@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Webpage</title>
+    <title>Hayden Manton Webpage</title>
 </head>
 <body>
     <header>
-        <h1 class="title">Your Title</h1>
+        <h1 class="name">Hayden Manton</h1>
     </header>
     <nav class="navbar">
         <ul>
-            <li><a href="#" class="nav-item active">Option 1</a></li>
-            <li><a href="#" class="nav-item">Option 2</a></li>
-            <li><a href="#" class="nav-item">Option 3</a></li>
-            <li><a href="#" class="nav-item">Option 4</a></li>
+            <li><a href="#" class="nav-item active">Home</a></li>
+            <li><a href="#" class="nav-item">About Me</a></li>
+            <li><a href="#" class="nav-item">My Skills</a></li>
+            <li><a href="#" class="nav-item">Projects</a></li>
+            <li><a href="#" class="nav-item">Awards & Certifications</a></li>
+            <li><a href="#" class="nav-item">Contact Me</a></li>
         </ul>
     </nav>
+    <div class="CV-container">
+        <div class="CV-image">
+          <a href="This_is_a_test.pdf" target="_blank">
+            <img src="CV-img.jpg" class="img" alt="" title="Click here to read my full CV">
+          </a>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            if (window.innerWidth > 800) {
+                window.scrollTo(0, 0);
+            }
+        }
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 800) {
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>
 </body>
 </html>
