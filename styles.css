@@ -132,3 +132,42 @@ ul li :hover {
         left: calc(50vw - 10px);
     }
   }
+
+
+@media (min-width: 800px) {
+    .CV-ClickHereContainer {
+        z-index: 100;
+        position: absolute;
+        top: 50%; /* Adjust this value as needed */
+        right: calc(-100px + calc((100vw - 800px) / 2));
+        transform: translate(-50%, -50%);
+        background: transparent;
+        width: 200px;
+    }
+
+    
+}
+
+
+
+
+.CV-Message {
+        color: #fff;
+        font-size: xx-large;
+        font-family: 'Poppins', sans-serif;
+}
+
+.CV-ClickHereContainer {
+    display: none; /* Hide the CV message by default */
+}
+
+
+
+@media (min-width: 800px) {
+    .CV-ClickHereContainer {
+        display: none; /* Hide the CV message by default for screen widths > 800px */
+    }
+    .CV-image:hover + .CV-ClickHereContainer {
+        display: block; /* Show the CV message when hovering over the CV image */
+    }
+}
