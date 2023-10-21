@@ -1,8 +1,21 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+    background: linear-gradient(to bottom, #000000, #393939);
+  }
+
 /* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-y: hidden;
+    scroll-behavior: auto;
 }
 
 /* Apply a background color to the header */
@@ -10,11 +23,11 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 1px 0;
 }
 
 /* Style the title */
-.title {
+.name {
     font-size: 3rem;
 }
 
@@ -23,6 +36,7 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 /* Style the navigation items */
@@ -57,3 +71,64 @@ li {
         flex-direction: column;
     }
 }
+
+ul li :hover {
+    background-color: white;
+    color:#000000;
+}
+
+  .CV-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #333;
+    padding: 0;
+    margin: 0;
+  }
+  .CV-image {
+    perspective: 3000px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50vw - 0px);
+    top:425px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+  }
+  .CV-image img {
+    transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+    box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+    transition: all .4s;
+    transform-style: preserve-3d;
+  }
+  .CV-image:hover img {
+    transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  }
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+    }
+
+    /* Add new styles for smaller screens */
+    .nav-item {
+      display: block; /* Make each item a block element */
+      margin: 0;
+      padding: 10px;
+    }
+
+    body {
+        overflow-y: visible;
+        overflow-x: hidden;
+      }
+    
+    .CV-image {
+        top: 615px;
+        left: calc(50vw - 10px);
+    }
+  }
