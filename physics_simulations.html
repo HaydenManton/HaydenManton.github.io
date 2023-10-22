@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="physics_simulations.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Projects</title>
+</head>
+<body>
+    <header>
+        <h1 class="name">Hayden Manton</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="about.html" class="nav-item">About Me</a></li>
+            <li><a href="skills.html" class="nav-item">My Skills</a></li>
+            <li><a href="projects.html" class="nav-item">Projects</a></li>
+            <li><a href="awards_certifications.html" class="nav-item active">Awards & Certifications</a></li>
+            <li><a href="contact_me.html" class="nav-item">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <img src="Physics_Simulations_Image.jpg" alt="Physics Simulations" id="PSimage" style="display: block;">
+        <div id="buttons" style="display: block;">
+            <button onclick="showVideo('Harmonics_Video.mp4')">Harmonics</button>
+            <button onclick="showVideo('Momentum_Video.mp4')">Momentum</button>
+            <button onclick="showVideo('ProjectileMotion_Video.mp4')">Projectile Motion</button>
+            <button onclick="showVideo('Moments_Video.mp4')">Moments</button>
+            <button onclick="showVideo('SUVATSolver_Video.mp4')">SUVAT Solver</button>
+            <button onclick="showVideo('OhmsLaw_Video.mp4')">Ohms Law</button>
+            <button onclick="showVideo('Capacitance_Video.mp4')">Capacitance</button>
+            <button onclick="showVideo('CircularMotion_Video.mp4')">Circular Motion</button>
+        </div>
+    </div>
+
+    <video id="videoPlayer" autoplay controls disablePictureInPicture disableRemotePlayback disableFullScreen display="none">
+        <source src="" type="video/mp4">
+    </video>
+
+    <script>
+        var video = document.getElementById('videoPlayer');
+        var PSimage = document.getElementById('PSimage');
+        var buttons = document.getElementById('buttons');
+    
+        function showVideo(videoSource) {
+            // Hide image and buttons
+            buttons.style.display = 'none';
+    
+            // Set the video source and display it
+            video.src = videoSource;
+            video.style.display = 'block';
+    
+            // Autoplay the video
+            video.play();
+    
+            // Disable video controls
+            video.controls = false;
+    
+            // Add an event listener to hide the video when it ends
+            video.addEventListener('ended', function() {
+                video.style.display = 'none';
+    
+                // Show the image and buttons
+                PSimage.style.display = 'block';
+                buttons.style.display = 'block';
+    
+                // Enable all buttons
+                var allButtons = document.querySelectorAll('button');
+                allButtons.forEach(function(button) {
+                    button.disabled = false;
+                });
+            });
+        }
+    </script>
+</body>
+</html>

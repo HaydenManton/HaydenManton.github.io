@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     overflow-y: hidden;
     scroll-behavior: auto;
+    background-color: #333333;
 }
 
 /* Apply a background color to the header */
