@@ -25,33 +25,45 @@
     <div id="content">
         <img src="Physics_Simulations_Image.jpg" alt="Physics Simulations" id="PSimage" style="display: block;">
         <div id="buttons" style="display: block;">
-            <button onclick="showVideo('Harmonics_Video.mp4')">Harmonics</button>
-            <button onclick="showVideo('Momentum_Video.mp4')">Momentum</button>
-            <button onclick="showVideo('ProjectileMotion_Video.mp4')">Projectile Motion</button>
-            <button onclick="showVideo('Moments_Video.mp4')">Moments</button>
-            <button onclick="showVideo('SUVATSolver_Video.mp4')">SUVAT Solver</button>
-            <button onclick="showVideo('OhmsLaw_Video.mp4')">Ohms Law</button>
-            <button onclick="showVideo('Capacitance_Video.mp4')">Capacitance</button>
-            <button onclick="showVideo('CircularMotion_Video.mp4')">Circular Motion</button>
+            <button onclick="showVideo('Harmonics_Video.mp4')"></button>
+            <button onclick="showVideo('Momentum_Video.mp4')"></button>
+            <button onclick="showVideo('ProjectileMotion_Video.mp4')"></button>
+            <button onclick="showVideo('Moments_Video.mp4')"></button>
+            <button onclick="showVideo('SUVATSolver_Video.mp4')"></button>
+            <button onclick="showVideo('OhmsLaw_Video.mp4')"></button>
+            <button onclick="showVideo('Capacitance_Video.mp4')"></button>
+            <button onclick="showVideo('CircularMotion_Video.mp4')"></button>
         </div>
     </div>
-
-    <video id="videoPlayer" autoplay controls disablePictureInPicture disableRemotePlayback disableFullScreen display="none">
+    <video id="videoPlayer" autoplay controlsList="nodownload noremoteplayback noremote fullscreen nodisplay" style="display: none" oncontextmenu="return false;">
         <source src="" type="video/mp4">
     </video>
+    <h1 id="projectName">A-level Physics Simulations</h1>
+    <h2 id="description">Gold Crest Award</h2>
+    <div class="click-message-container">
+        <p class="Click-Simulation-Message">&lt;- Click A Simulation For A Video Demo</p>
+    </div>
 
     <script>
         var video = document.getElementById('videoPlayer');
         var PSimage = document.getElementById('PSimage');
         var buttons = document.getElementById('buttons');
+        var projectName = document.getElementById('projectName');
+        var description = document.getElementById('description');
+        var clickMessage = document.querySelector('.Click-Simulation-Message');
     
         function showVideo(videoSource) {
             // Hide image and buttons
             buttons.style.display = 'none';
+            projectName.style.display = 'none';
+            description.style.display = 'none';
+            clickMessage.style.display = 'none';
     
             // Set the video source and display it
             video.src = videoSource;
             video.style.display = 'block';
+    
+            // Raise the position of projectName, description, and clickMessage by 100px
     
             // Autoplay the video
             video.play();
@@ -63,9 +75,14 @@
             video.addEventListener('ended', function() {
                 video.style.display = 'none';
     
+                // Reset the position of projectName, description, and clickMessage
+    
                 // Show the image and buttons
                 PSimage.style.display = 'block';
                 buttons.style.display = 'block';
+                projectName.style.display = 'block';
+                description.style.display = 'block';
+                clickMessage.style.display = 'block';
     
                 // Enable all buttons
                 var allButtons = document.querySelectorAll('button');

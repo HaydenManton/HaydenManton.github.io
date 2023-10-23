@@ -229,7 +229,7 @@ ul li :hover {
     #content {
         text-align: center;
         position: relative;
-        width: 90vw;
+        min-width: 90vw;
     }
 
     #PSimage, #videoPlayer {
@@ -237,7 +237,6 @@ ul li :hover {
         height: auto;
         position: absolute;
         top: 50px;
-        left: 5vw;
         z-index: 1;
     }
 
@@ -258,12 +257,16 @@ ul li :hover {
     }
 }
 
-/*#buttons button {
+#buttons button {
     background:transparent;
-} */
+    border:none;
+} 
 
 #buttons button:hover {
     cursor:pointer;
+    outline: none;
+    border-color: #4a4a4a;
+    box-shadow: 0 0 10px #434343;
 }
 
 
@@ -286,6 +289,81 @@ ul li :hover {
 
 
 
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    #buttons button:nth-child(4) { /*Stationary Waves*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 67.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Momentum*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 50.7vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Projectile Motion*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 34vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(1) { /*Moments*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 17.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 67.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 50.7vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 34vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 17.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+}
 
 
 
@@ -641,3 +719,158 @@ ul li :hover {
         z-index: 5;
     }
 }
+
+#projectName{
+    position: relative;
+    color:#fff;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    align-self: center;
+    text-align: center;
+    top: -20px;
+    z-index: 100;
+}
+
+#description {
+    position: relative;
+    color:#a9a9a9;
+    font-size: medium;
+    align-self: center;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:lighter;
+    top: -40px;
+    z-index: 101;
+}
+
+.Click-Simulation-Message {
+    color: #fff;
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    display: none; /* Hide the CV message by default */
+    z-index: 200;
+}
+
+#PSimage + .Click-Simulation-Message {
+    display: block;
+}
+
+
+
+
+
+@media (min-width: 800px) {
+    #content {
+        position: relative;
+        text-align: center;
+        width: 70vw;
+    }
+
+    #PSimage,
+    #videoPlayer {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    #videoPlayer {
+        display: none;
+        width: 70vw; /* Set the video's width to match the image's width */
+        height: auto; /* Maintain aspect ratio */
+        position: relative;
+    }
+
+    #buttons {
+        position: relative;
+        z-index: 2;
+    }
+}
+/*
+#projectName {
+    position: absolute;
+    color: #fff;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    top: 130px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+}
+
+#description {
+    position: absolute; 
+    color: #a9a9a9;
+    font-size: medium;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    top: 167px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+}
+*/
+
+
+
+
+
+@media (min-width: 800px) {
+
+    .Click-Simulation-Message {
+        color: #ffffff;
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+        display: block; 
+        z-index: 300;
+        position: absolute;
+        top: 0px; 
+        right: 15vw; 
+        text-align: left;
+        align-self: center;
+        width: 100px;
+    }
+
+    .click-message-container {
+        position: absolute;
+        align-self: right;
+        right: -13vw;
+    }
+
+}
+@media (max-width: 800px) {
+
+    #PSimage, #videoPlayer {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    #buttons button {
+        position: absolute;
+    }
+
+    .Click-Simulation-Message {
+        color: #ffffff;
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+        display: none; 
+        z-index: 300;
+        position: absolute;
+        top: 50px; 
+        right: 15vw; 
+        text-align: left;
+        align-self: center;
+        width: 100px;
+    }
+
+    .click-message-container {
+        position: absolute;
+        align-self: right;
+        right: -13vw;
+    }
+}
+
