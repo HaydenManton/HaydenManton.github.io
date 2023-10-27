@@ -888,6 +888,16 @@ body {
     color: white;
 }
 
+.awardTitle {
+    padding-left: 20px;
+}
+.awardContent {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 500px;
+    text-align: justify;
+}
+
 section p a {
     color:#a0a0a0;
     font-size: smaller;
