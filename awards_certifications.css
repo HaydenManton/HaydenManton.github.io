@@ -1,0 +1,894 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+  }
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: visible;
+    scroll-behavior: auto;
+    background-color: #333333;
+}
+
+/* Apply a background color to the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+}
+
+/* Style the title */
+.name {
+    font-size: 3rem;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Style the navigation items */
+.nav-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Apply styles to the active navigation item */
+.nav-item.active {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Remove list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+ul li :hover {
+    background-color: white;
+    color:#000000;
+}
+
+  .CV-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #333;
+    padding: 0;
+    margin: 0;
+  }
+  .CV-image {
+    perspective: 3000px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50vw - 0px);
+    top:425px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+  }
+  .CV-image img {
+    transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+    box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+    transition: all .4s;
+    transform-style: preserve-3d;
+  }
+  .CV-image:hover img {
+    transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  }
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+    }
+
+    /* Add new styles for smaller screens */
+    .nav-item {
+      display: block; /* Make each item a block element */
+      margin: 0;
+      padding: 10px;
+    }
+
+    body {
+        overflow-y: visible;
+      }
+    
+    .CV-image {
+        top: 615px;
+        left: calc(50vw - 10px);
+    }
+  }
+
+
+@media (min-width: 800px) {
+    .CV-ClickHereContainer {
+        z-index: 100;
+        position: absolute;
+        top: 50%; /* Adjust this value as needed */
+        right: calc(-100px + calc((100vw - 800px) / 2));
+        transform: translate(-50%, -50%);
+        background: transparent;
+        width: 200px;
+    }
+
+    
+}
+
+
+
+
+.CV-Message {
+        color: #fff;
+        font-size: xx-large;
+        font-family: 'Poppins', sans-serif;
+}
+
+.CV-ClickHereContainer {
+    display: none; /* Hide the CV message by default */
+}
+
+
+
+@media (min-width: 800px) {
+    .CV-ClickHereContainer {
+        display: none; /* Hide the CV message by default for screen widths > 800px */
+    }
+    .CV-image:hover + .CV-ClickHereContainer {
+        display: block; /* Show the CV message when hovering over the CV image */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 800px) {
+    #content {
+        text-align: center;
+        position: relative;
+        width: 70vw;
+    }
+
+    #PSimage, #videoPlayer {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    #videoPlayer {
+        display: none;
+        width: 70vw; /* Set the video's width to match the image's width */
+        height: auto; /* Maintain aspect ratio */
+        position: relative;
+    }
+
+    #buttons {
+        position: relative;
+        z-index: 2;
+    }
+
+    body {
+        align-content: centre;
+    }
+}
+
+@media (max-width: 800px) {
+    #content {
+        text-align: center;
+        position: relative;
+        min-width: 90vw;
+    }
+
+    #PSimage, #videoPlayer {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+    }
+
+    #videoPlayer {
+        display: none;
+        width: 90vw; /* Set the video's width to match the image's width */
+        height: auto; /* Maintain aspect ratio */
+        position: relative;
+    }
+
+    #buttons {
+        position: relative;
+        z-index: 2;
+    }
+
+    body {
+        align-content: centre;
+    }
+}
+
+#buttons button {
+    background:transparent;
+    border:none;
+} 
+
+#buttons button:hover {
+    cursor:pointer;
+    outline: none;
+    border-color: #4a4a4a;
+    box-shadow: 0 0 10px #434343;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    #buttons button:nth-child(4) { /*Stationary Waves*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 67.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Momentum*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 50.7vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Projectile Motion*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 34vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(1) { /*Moments*/
+        position: absolute;
+        top: calc(40px + 33.8vw);
+        left: 17.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 67.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 50.7vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 34vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: calc(40px + 21.3vw);
+        left: 17.3vw;
+        width: 16vw;
+        height: 11.6vw;
+        z-index: 5;
+    }
+}
+
+
+
+
+
+
+
+
+/*Positioning The Buttons*/
+@media (min-width: 800px) and (max-width: 900px) {
+    #buttons button:nth-child(1) { /*Stationary Waves*/
+        position: absolute;
+        top: 30.80vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Momentum*/
+        position: absolute;
+        top: 30.80vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Projectile Motion*/
+        position: absolute;
+        top: 30.80vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(4) { /*Moments*/
+        position: absolute;
+        top: 30.80vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: 21vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: 21vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: 21vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: 21vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+}
+
+
+
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    #buttons button:nth-child(1) { /*Stationary Waves*/
+        position: absolute;
+        top: 30.3vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Momentum*/
+        position: absolute;
+        top: 30.3vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Projectile Motion*/
+        position: absolute;
+        top: 30.3vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(4) { /*Moments*/
+        position: absolute;
+        top: 30.3vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: 20.5vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: 20.5vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: 20.5vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: 20.5vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+}
+
+
+
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+    #buttons button:nth-child(1) { /*Stationary Waves*/
+        position: absolute;
+        top: 29.5vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Momentum*/
+        position: absolute;
+        top: 29.5vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Projectile Motion*/
+        position: absolute;
+        top: 29.5vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(4) { /*Moments*/
+        position: absolute;
+        top: 29.5vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: 19.7vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: 19.7vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: 19.7vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: 19.7vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+}
+
+
+
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    #buttons button:nth-child(1) { /*Stationary Waves*/
+        position: absolute;
+        top: 29vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Momentum*/
+        position: absolute;
+        top: 29vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Projectile Motion*/
+        position: absolute;
+        top: 29vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(4) { /*Moments*/
+        position: absolute;
+        top: 29vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: 19.2vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: 19.2vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: 19.2vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: 19.2vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    #buttons button:nth-child(1) { /*Stationary Waves*/
+        position: absolute;
+        top: 28.5vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(2) { /*Momentum*/
+        position: absolute;
+        top: 28.5vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(3) { /*Projectile Motion*/
+        position: absolute;
+        top: 28.5vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(4) { /*Moments*/
+        position: absolute;
+        top: 28.5vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(5) { /*SUVAT Solver*/
+        position: absolute;
+        top: 18.7vw;
+        left: 63.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(6) { /*Ohms Law*/
+        position: absolute;
+        top: 18.7vw;
+        left: 50.65vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(7) { /*Capacitance*/
+        position: absolute;
+        top: 18.7vw;
+        left: 37.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+    #buttons button:nth-child(8) { /*Circular Motion*/
+        position: absolute;
+        top: 18.7vw;
+        left: 24.75vw;
+        width: 12vw;
+        height: 9vw;
+        z-index: 5;
+    }
+}
+
+#projectName{
+    position: relative;
+    color:#fff;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    align-self: center;
+    text-align: center;
+    top: -20px;
+    z-index: 100;
+}
+
+#description {
+    position: relative;
+    color:#a9a9a9;
+    font-size: medium;
+    align-self: center;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:lighter;
+    top: -40px;
+    z-index: 101;
+}
+
+.Click-Simulation-Message {
+    color: #fff;
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    display: none; /* Hide the CV message by default */
+    z-index: 200;
+}
+
+#PSimage + .Click-Simulation-Message {
+    display: block;
+}
+
+
+
+
+
+@media (min-width: 800px) {
+    #content {
+        position: relative;
+        text-align: center;
+        width: 70vw;
+    }
+
+    #PSimage,
+    #videoPlayer {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    #videoPlayer {
+        display: none;
+        width: 70vw; /* Set the video's width to match the image's width */
+        height: auto; /* Maintain aspect ratio */
+        position: relative;
+    }
+
+    #buttons {
+        position: relative;
+        z-index: 2;
+    }
+}
+/*
+#projectName {
+    position: absolute;
+    color: #fff;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    top: 130px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+}
+
+#description {
+    position: absolute; 
+    color: #a9a9a9;
+    font-size: medium;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    top: 167px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+}
+*/
+
+
+
+
+
+@media (min-width: 800px) {
+
+    .Click-Simulation-Message {
+        color: #ffffff;
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+        display: block; 
+        z-index: 300;
+        position: absolute;
+        top: 0px; 
+        right: 15vw; 
+        text-align: left;
+        align-self: center;
+        width: 100px;
+    }
+
+    .click-message-container {
+        position: absolute;
+        align-self: right;
+        right: -13vw;
+    }
+
+}
+@media (max-width: 800px) {
+
+    #PSimage, #videoPlayer {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    #buttons button {
+        position: absolute;
+    }
+
+    .Click-Simulation-Message {
+        color: #ffffff;
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+        display: none; 
+        z-index: 300;
+        position: absolute;
+        top: 50px; 
+        right: 15vw; 
+        text-align: left;
+        align-self: center;
+        width: 100px;
+    }
+
+    .click-message-container {
+        position: absolute;
+        align-self: right;
+        right: -13vw;
+    }
+}
+
+.awcertbutton, .aecertbutton img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.awardTitle, .awardContent {
+    color: white;
+}
+
+section p a {
+    color:#a0a0a0;
+    font-size: smaller;
+}

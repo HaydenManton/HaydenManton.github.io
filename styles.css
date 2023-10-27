@@ -172,3 +172,12 @@ ul li :hover {
         display: block; /* Show the CV message when hovering over the CV image */
     }
 }
+
+#ContentsTitle {
+  color:#fff;
+  font-size: large;
+}
+
+.Contents a {
+  text-decoration: underline;
+}
