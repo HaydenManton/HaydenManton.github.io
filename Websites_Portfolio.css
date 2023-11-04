@@ -1,0 +1,345 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+  }
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: auto;
+    background-color: #000000;
+}
+
+/* Apply a background color to the header */
+header {
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 1px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Style the title */
+.name {
+    font-size: 3rem;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Style the navigation items */
+.nav-item {
+    text-decoration: none;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    padding: 10px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Apply styles to the active navigation item */
+.nav-item.active {
+    background: none;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Remove list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+ul li :hover {
+    color:#ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+    }
+
+    /* Add new styles for smaller screens */
+    .nav-item {
+      display: block; /* Make each item a block element */
+      margin: 0;
+      padding: 10px;
+    }
+
+    body {
+        overflow-y: visible;
+        overflow-x: hidden;
+      }
+    
+  }
+
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.stars::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff; /* Color of the stars */
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+    25% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(25deg) rotateY(25deg) translateZ(50px);
+    }
+    50% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+    75% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(15deg) rotateY(15deg) translateZ(50px);
+    }
+    100% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+}
+
+.WebsitePortfolio {
+    position: relative;
+    text-align: center;
+    color:#fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-family: 'DO Futuristic', sans-serif;
+}
+
+.WebsiteSection1 {
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically within the section */
+    margin-top: -100px;
+}
+
+.floating-object1 {
+    position: relative;
+    perspective: 1000px;
+    width: 150px;
+    height: 100px;
+    animation: float 15s infinite alternate ease-in-out;
+    align-self: flex-end;
+    margin-right: 10px; /* Adjust the margin as needed for horizontal spacing */
+    right: calc((100vw - 800px) / 2);
+}
+
+.floating-object1 img {
+    max-height: 250px;
+    width: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    margin-top: -125px; /* Adjust the margin to center the image vertically */
+}
+
+.rectangle1 {
+    color:#fff;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+    clip-path: polygon(10% 10%, 90% 10%, 100% 20%, 100% 80%, 90% 90%, 10% 90%, 0 80%, 0 20%);
+    left: calc((100vw - 800px) / 2);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Use 'border' for a solid white border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Apply the shadow directly to the .rectangle element */
+}
+
+.rectangle1::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Use 'border' for a solid white border */
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background-color: #ffffff20;
+    background: linear-gradient(to right, #ffffff3a, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff3a);
+}
+
+.rectangle1 .webName {
+    margin: 50px;
+    color:#fff;
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .rectangle1 {
+        left: calc(50vw - 275px);
+    }
+
+    .floating-object1 {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+    25% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(25deg) rotateY(25deg) translateZ(50px);
+    }
+    50% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+    75% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(15deg) rotateY(15deg) translateZ(50px);
+    }
+    100% {
+        transform: translate(-50%, -50%) perspective(1000px) rotateX(20deg) rotateY(20deg) translateZ(50px);
+    }
+}
+
+.WebsiteSection2 {
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically within the section */
+    margin-top: -100px;
+}
+
+.floating-object2 {
+    position: relative;
+    perspective: 1000px;
+    width: 150px;
+    height: 100px;
+    animation: float 15s infinite alternate ease-in-out;
+    align-self: flex-end;
+    margin-right: 10px; /* Adjust the margin as needed for horizontal spacing */
+    margin-left: 95px;
+    left: calc((100vw - 800px) / 2);
+}
+
+.floating-object2 img {
+    max-height: 250px;
+    width: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    margin-top: -125px; /* Adjust the margin to center the image vertically */
+}
+
+.rectangle2 {
+    color:#fff;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+    clip-path: polygon(10% 10%, 90% 10%, 100% 20%, 100% 80%, 90% 90%, 10% 90%, 0 80%, 0 20%);
+    right: calc((100vw - 800px) / 2);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Use 'border' for a solid white border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Apply the shadow directly to the .rectangle element */
+}
+
+.rectangle2::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 10px solid rgba(255, 255, 255, 0.5); /* Use 'border' for a solid white border */
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background-color: #ffffff20;
+    background: linear-gradient(to right, #ffffff3a, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff20, #ffffff3a);
+}
+
+.rectangle2 .webName {
+    margin: 50px;
+    color:#fff;
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .rectangle2 {
+        left: calc(50vw - 275px);
+    }
+
+    .floating-object2 {
+        display: none;
+    }
+}

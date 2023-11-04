@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <!--Character Set-->
+    <meta charset="utf-8">
+    <!--A 'Viewport' to allow for mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Page Title-->
+    <title>Product Page</title>
+    <!--Author's Name-->
+    <meta name="author" content="Hayden Manton">
+    <!--Link to cascading style sheets used to style this HTML file-->
+    <link rel="stylesheet" type="text/css" href="RJstyle.css">
+    <link rel="stylesheet" type="text/css" href="RJgrid.css">
+    <!--Link to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+  </head>
+
+
+
+
+  <!--Body - Containing all Visible Content on Web Page-->
+  <body>
+
+    <!--Header - including Logo & Navigation Bar-->
+    <header>
+      <!--logo - containing Company Name & Tagline-->
+      <div id="logo">
+        <!--Company Name - Robot Juice-->
+        <h1 class="name">
+          <!--First Word-->
+          <span class="robot">Robot</span>
+          <!--Second Word - with a space prior-->
+          <span class="juice">&nbsp;Juice</span>
+        </h1>
+        <!--Company Tagline - fictitious cycle lubricants-->
+        <p class="slogan">fictitious cycle lubricants</p>
+      </div>
+      <!--Navigation Bar - including 6 Options-->
+      <nav id="navBar">
+        <!--Home Option - with link to Home Page-->
+        <p class="homeOption"><a href="RJindex.html">Home</a></p>
+        <hr class="separator">
+        <!--Products Option - Current Page-->
+        <p class="productsOption"><a>Products</a></p>
+        <hr class="separator">
+        <!--Protect Option-->
+        <p class="protectOption"><a>Protect</a></p>
+        <hr class="separator">
+        <!--Stockist's Option-->
+        <p class="stockistsOption"><a>Stockist's</a></p>
+        <hr class="separator">
+        <!--Events Option-->
+        <p class="eventsOption"><a>Events</a></p>
+        <hr class="separator">
+        <!--Reviews Option-->
+        <p class="reviewsOption"><a>Reviews</a></p>
+        </nav>
+    </header>
+
+
+    <!--Main Container - including only components specific to the Product Page-->
+    <main class="main-container-prod-page">
+
+
+      <!--Buy Products Section - contains 3 columns-->
+        <section id="buy-products">
+
+          <!--Column 1 - Image Options-->
+          <article id="image-options">
+            <!--Column 1 - contains these 3 Images that When Clicked, Display in the Second Column-->
+            <a href="#" onclick="changeImage('RJimages/robotjuicebikeoil.jpg')"><img src="RJimages/prod-thumb1.jpg" alt="Image 1"></a>
+            <a href="#" onclick="changeImage('RJimages/bikechain-bikeoil.jpg')"><img src="RJimages/bikechain-bikeoil.jpg" alt="Image 2"></a>
+            <a href="#" onclick="changeImage('RJimages/prod-thumb3.jpg')"><img src="RJimages/prod-thumb3.jpg" alt="Image 3"></a>
+          </article>
+
+          <!--Column 2 - Selected Image-->
+          <article id="selected-image">
+            <!--Column 2 - contains the First Image by Default, or the Chosen Image-->
+            <img id="selected-img" src="RJimages/robotjuicebikeoil.jpg" alt="Selected Image">
+          </article>
+
+          <!--Column 3 - Product Info-->
+          <article class="product-info">
+            <!--Product Title & Price-->
+            <h2 class="product-title">Bike Oil</h2>
+            <p class="product-price">£99.99</p>
+
+            <!--Product Dropdowns - Contains 2 Dropdown Boxes for Size & Quantity-->
+            <article class="product-dropdowns">
+              <!--Dropdown for Size - Options include: Small | Medium | Large-->
+              <select class="product-dropdown">
+                <option value="">Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <!--Dropdown for Quantity - Options include: 1 | 2 | 3-->
+              <select class="product-dropdown">
+                <option value="">Qty</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </article>
+
+            <!--Buy Now Button-->
+            <article id="buy-now">
+                <a href="#" class="buy-now-btn">BUY NOW</a>
+            </article>
+
+            <!--Share Container - includes 2 links and product description-->
+            <article id="share-container">
+              <!--Find Nearest Stockist Link-->
+              <a href="#" class="share-container-text" id="find-nearest-stockist">FIND NEAREST STOCKIST</a>
+              <!--Share Product-->
+              <span>
+                <a class="share-container-text">SHARE</a>
+                <!--3 Social Media Links-->
+                <a href="#"><img src="RJimages/facebook.jpg" alt="Facebook-Image"/></a>
+                <a href="#"><img src="RJimages/twitter.jpg" alt="Twitter-Image"/></a>
+                <a href="#"><img src="RJimages/email.jpg" alt="Email-Image"/></a>
+              </span>
+              <!--Product Description-->
+              <p>Robot Juice bike oil for bicycles stops rust and other corrosion from starting. Applied to already corroding metals it breaks down the corrosion and starts preventing it from building up and protects from the point of contact.</p>
+            </article>
+          </article>
+        </section>
+
+
+        <!--Similar Products Section - contains 6 images-->
+        <section class="similar-products">
+          <h2>Similar Products</h2>
+
+          <!--Image Container - includes the 6 images-->
+          <article class="image-container">
+            <img src="RJimages/simprod.jpg" alt="Similar product 1">
+            <img src="RJimages/simprod.jpg" alt="Similar product 2">
+            <img src="RJimages/simprod.jpg" alt="Similar product 3">
+            <img src="RJimages/simprod.jpg" alt="Similar product 4">
+            <img src="RJimages/simprod.jpg" alt="Similar product 5">
+            <img src="RJimages/simprod.jpg" alt="Similar product 6">
+          </article>
+        </section>
+      </main>
+
+
+
+      <!--Reviews Section - includes the Header, Reviews & Button to read more reviews-->
+      <section id="reviews">
+        <!--Reviews Section Header-->
+        <h2>Product Reviews&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****</h2>
+        <!--Review Container - includes: Profile Picture; Rating & Review-->
+        <article id="reviews-container"></article>
+        <!--Read More Button - Displays all reviews (More than the default 5 reviews)-->
+        <button id="read-more-button">READ ALL REVIEWS</button>
+        <!--Hide More Button - Reduces the number of reviews displayed to 5-->
+        <button id="hide-more-button" class="hidden">HIDE MORE REVIEWS</button>
+        <!--Link to javaScript file for the Reviews-->
+        <script src="RJreviews.js"></script>
+      </section>
+
+
+
+    <!--Footer - including 2 layers-->
+    <footer>
+
+
+      <!--Footer - Top Layer-->
+      <section id="footerTop">
+        <!--Top Layer Image-->
+        <img id="cycmg-img" src="RJimages/cyclemagazine.jpg" alt="Cycle-Magazine-Image"/>
+
+        <!--Top Layer Latest Reviews - including Header & Description-->
+        <article id="latestReviews">
+          <h2>Latest Reviews</h2>
+          <p>Cycling magazine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubs.</p>
+        </article>
+
+        <!--Top Layer Links - including Header & 4 Links-->
+        <article id="links">
+          <h2>Links</h2>
+          <a href="">Edge Hill University<br></a>
+          <a href="">Dave Walsh<br></a>
+          <a href="">https://twitter.com/walsh_d<br></a>
+          <a href="">CIS1110 Web Design and Development module<br></a>
+        </article>
+      </section>
+
+
+      <!--Footer - Bottom Layer-->
+      <section id="footerBot">
+
+        <!--Bottom Layer - Left Content-->
+        <article id="leftFB">
+          <!--Left Content - Text-->
+          <p>Robot Juice Fictitious Products Not Ltd., Unit 9%, Privet Drive, Little Whingeing, Surrey DN18 5RP</p>
+          <p>Telephone: +44 (0)1695 657648. Email: walshd@edgehill.ac.uk</p>
+        </article>
+
+        <!--Bottom Layer - Right Content-->
+        <article id="rightFB">
+          <!--Right Content - Text-->
+            <p>Contact Us | Privacy | Terms & Conditions | Accessibility</p>
+            <p>Copyright © 2018 Dave Walsh. Design by Dave Walsh</p>
+        </article>
+      </section>
+    </footer>
+  </body>
+</html>

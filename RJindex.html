@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+  <head>
+    <!--Character Set-->
+    <meta charset="utf-8">
+    <!--A 'Viewport' to allow for mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Page Title-->
+    <title>Home Page</title>
+    <!--Author's Name-->
+    <meta name="author" content="Hayden Manton">
+    <!--Link to cascading style sheets used to style this HTML file-->
+    <link rel="stylesheet" type="text/css" href="RJstyle.css">
+    <link rel="stylesheet" type="text/css" href="RJgrid.css">
+    <!--Link to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+  </head>
+
+
+
+
+  <!--Body - Containing all Visible Content on Web Page-->
+  <body>
+
+    <!--Header - including Logo & Navigation Bar-->
+    <header>
+      <!--logo - containing Company Name & Tagline-->
+      <div id="logo">
+        <!--Company Name - Robot Juice-->
+        <h1 class="name">
+          <!--First Word-->
+          <span class="robot">Robot</span>
+          <!--Second Word - with a space prior-->
+          <span class="juice">&nbsp;Juice</span>
+        </h1>
+        <!--Company Tagline - fictitious cycle lubricants-->
+        <p class="slogan">fictitious cycle lubricants</p>
+      </div>
+      <!--Navigation Bar - including 6 Options-->
+      <nav id="navBar">
+        <!--Home Option - Current Page-->
+        <p class="homeOption"><a>Home</a></p>
+        <hr class="separator">
+        <!--Products Option - with link to Product Page-->
+        <p class="productsOption"><a href="RJproduct.html">Products</a></p>
+        <hr class="separator">
+        <!--Protect Option-->
+        <p class="protectOption"><a>Protect</a></p>
+        <hr class="separator">
+        <!--Stockist's Option-->
+        <p class="stockistsOption"><a>Stockist's</a></p>
+        <hr class="separator">
+        <!--Events Option-->
+        <p class="eventsOption"><a>Events</a></p>
+        <hr class="separator">
+        <!--Reviews Option-->
+        <p class="reviewsOption"><a>Reviews</a></p>
+      </nav>
+    </header>
+
+
+
+    <!--Main Container - including only components specific to the Home Page-->
+    <main class="main-container">
+
+
+      <!--Hero Space - including large Image & Description-->
+      <img src="RJimages/robotbanner.jpg" id="rjImg" alt="main-Robot-Juice-Image"/>
+      <p id="rjDesc">Robot juice is the ultimate fictitious bicycle and motorcycle lubricant oils.</p>
+
+
+      <!--Products Section - displays the different products and reviews-->
+      <section id="products">
+
+        <!--Bike Oil - Image & Description-->
+        <article class="large-cell" id="large-cell-1">
+          <img class="large-cell-img" src="RJimages/bikechain-bikeoil.jpg" alt="Bike-Chain-Image"/>
+          <h2 class="large-cell-name">Bike Oil</h2>
+          <p class="large-cell-desc">Stops and protects against rust, reduces friction on moving parts and is essential on any cycle.</p>
+        </article>
+
+        <!--Dry Lubricant - Image & Description-->
+        <article class="large-cell" id="large-cell-2">
+          <img class="large-cell-img" src="RJimages/cycleside-drylubrication.jpg" alt="Dry-Lube-Image"/>
+          <h2 class="large-cell-name">Dry Lubricant</h2>
+          <p class="large-cell-desc">Perfect chain lubricant for dry road riding. Resists water penetration and wash-off easily.</p>
+        </article>
+
+        <!--Wet Lubricant - Image & Description-->
+        <article class="large-cell" id="large-cell-3">
+          <img class="large-cell-img" src="RJimages/frontcycle-wetlubrication.jpg" alt="Wet-Lube-Image"/>
+          <h2 class="large-cell-name">Wet Lubricant</h2>
+          <p class="large-cell-desc">A thick, heavy duty lube designed to stick to the chain in wet conditions. Ideal for extreme weather and long distance riding.</p>
+        </article>
+
+        <!--Product Reviews - Image & Description-->
+        <article class="large-cell" id="large-cell-4">
+          <img class="large-cell-img" src="RJimages/productreviews.jpg" alt="Product-Reviews-Image"/>
+          <h2 class="large-cell-name">Product Reviews</h2>
+          <p class="large-cell-desc">Read what the press and our customers say about our excellent products.</p>
+        </article>
+      </section>
+
+
+      <!--Latest News & Poll Section-->
+      <section id="lnandPoll">
+
+        
+        <!--Latest News - including 3 News Items-->
+        <article id="latestNews">
+          <!--Latest News Header-->
+          <h2 class="lnPheader">Latest News</h2>
+          <!--First News Item - Name, Information & Date-->
+          <h3 class="lnPtitle">News item one!</h3>
+          <p class="lnPtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.</p>  
+          <p class="lnPtext lnPred lnPdate">September, 2012</p>  
+          <!--Second News Item - Name, Information & Date-->
+          <h3 class="lnPtitle">News item one!</h3>
+          <p class="lnPtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>  
+          <p class="lnPtext lnPred lnPdate">September, 2012</p>
+          <!--Third News Item - Name, Information & Date-->
+          <h3 class="lnPtitle">News item one!</h3>
+          <p class="lnPtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>  
+          <p class="lnPtext lnPred lnPdate">September, 2012</p>  
+        </article>
+
+        <!--Poll - including Reader Poll & Competition-->
+        <article id="poll">
+          <!--Reader Poll Header-->
+          <h2 class="lnPheader">Reader Poll</h2>
+          <!--Reader Poll Question-->
+          <p class="lnPtext lnPred">Are Robot Juice the best and most usable and accessible fake oils around?</p>
+          <!--Yes/No Radio Buttons-->
+          <form class="radio-form">
+            <label class="radio-label">
+              <input type="radio" name="option" value="yes" class="radio-input"> Yes
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="option" value="no" class="radio-input"> No
+            </label>
+          </form>
+          <!--Thank You Messgae - After the user has participated in the poll-->
+          <article id="output-message" style="display:none">
+            <p>Thank you for participating in the poll!</p>
+            <!--Displays Total Poll Results-->
+            <p>Total number of Yes: <span id="total-yes"></span></p>
+            <p>Total number of No: <span id="total-no"></span></p>
+          </article>
+          <!--Competiton - including Header, Description, Question, Options & Additional Information-->
+          <h2 class="lnPheader">Competition</h2>
+          <p class="lnPtext">Win absolutely nothing by entering this extremely expensive competition. Robot Juice will not send you a full range of our cycling and motorcycle oils and lubricants as we do not exist. But just for fun..</p>
+          <p class="lnPtext">Which Film is our address made up from?</p>
+          <p class="lnPtext">a&#41; Armageddon<br>b&#41; Harry Potter<br>c&#41; The Simpson (Movie)</p>
+          <p class="lnPtext">answers on a postcard please</p>
+        </article>
+      </section>
+    </main>
+
+
+
+    <!--Footer - including 2 layers-->
+    <footer>
+
+
+      <!--Footer - Top Layer-->
+      <section id="footerTop">
+        <!--Top Layer Image-->
+        <img id="cycmg-img" src="RJimages/cyclemagazine.jpg" alt="Cycle-Magazine-Image"/>
+
+        <!--Top Layer Latest Reviews - including Header & Description-->
+        <article id="latestReviews">
+          <h2>Latest Reviews</h2>
+          <p>Cycling magazine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubs.</p>
+        </article>
+
+        <!--Top Layer Links - including Header & 4 Links-->
+        <article id="links">
+          <h2>Links</h2>
+          <a href="">Edge Hill University<br></a>
+          <a href="">Dave Walsh<br></a>
+          <a href="">https://twitter.com/walsh_d<br></a>
+          <a href="">CIS1110 Web Design and Development module<br></a>
+        </article>
+      </section>
+
+
+      <!--Footer - Bottom Layer-->
+      <section id="footerBot">
+
+        <!--Bottom Layer - Left Content-->
+        <article id="leftFB">
+          <!--Left Content - Text-->
+          <p>Robot Juice Fictitious Products Not Ltd., Unit 9%, Privet Drive, Little Whingeing, Surrey DN18 5RP</p>
+          <p>Telephone: +44 (0)1695 657648. Email: walshd@edgehill.ac.uk</p>
+        </article>
+
+        <!--Bottom Layer - Right Content-->
+        <article id="rightFB">
+          <!--Right Content - Text-->
+            <p>Contact Us | Privacy | Terms & Conditions | Accessibility</p>
+            <p>Copyright © 2018 Dave Walsh. Design by Dave Walsh</p>
+        </article>
+      </section>
+    </footer>
+
+
+    <!--Link to javaScript file for the Reader Poll-->
+    <script src="RJpoll.js"></script>
+  </body>
+</html>

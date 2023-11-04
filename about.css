@@ -14,14 +14,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow-y: hidden;
     scroll-behavior: auto;
     background-color: #333333;
 }
 
 /* Apply a background color to the header */
 header {
-    background-color: #516b64;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1px 0;
@@ -34,7 +33,7 @@ header {
 
 /* Style the navigation bar */
 .navbar {
-    background-color: #516b64;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding-bottom: 10px;
@@ -52,7 +51,7 @@ header {
 /* Apply styles to the active navigation item */
 .nav-item.active {
     background-color: #fff;
-    color: #516b64;
+    color: #333;
 }
 
 /* Remove list styles */
@@ -81,7 +80,7 @@ ul li :hover {
   .CV-container {
     width: 100%;
     min-height: 100vh;
-    background: #516b64;
+    background: #333;
     padding: 0;
     margin: 0;
   }
@@ -122,11 +121,6 @@ ul li :hover {
       margin: 0;
       padding: 10px;
     }
-
-    body {
-        overflow-y: visible;
-        overflow-x: hidden;
-      }
     
     .CV-image {
         top: 615px;
@@ -181,3 +175,51 @@ ul li :hover {
 .Contents a {
   text-decoration: underline;
 }
+
+
+
+
+
+
+.Qual, .QualWhere {
+    color:white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.Grades {
+    font-weight:lighter;
+    font-size: smaller;
+    margin-top: 0px;
+}
+
+.QualWhere {
+    margin-top: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.GCSEcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color:white;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .first-word, .second-word {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first-word p, .second-word p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .second-word p{
+    margin-left: 50px;
+  }

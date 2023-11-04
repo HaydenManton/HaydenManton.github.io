@@ -15,12 +15,12 @@ body {
     font-family: Arial, sans-serif;
     overflow-y: visible;
     scroll-behavior: auto;
-    background-color: #333333;
+    background-color: #516b64;
 }
 
 /* Apply a background color to the header */
 header {
-    background-color: #333;
+    background-color: #516b64;
     color: #fff;
     text-align: center;
     padding: 1px 0;
@@ -33,7 +33,7 @@ header {
 
 /* Style the navigation bar */
 .navbar {
-    background-color: #333;
+    background-color: #516b64;
     color: #fff;
     text-align: center;
     padding-bottom: 10px;
@@ -51,7 +51,7 @@ header {
 /* Apply styles to the active navigation item */
 .nav-item.active {
     background-color: #fff;
-    color: #333;
+    color: #516b64;
 }
 
 /* Remove list styles */
@@ -80,7 +80,7 @@ ul li :hover {
   .CV-container {
     width: 100%;
     min-height: 100vh;
-    background: #333;
+    background: #516b64;
     padding: 0;
     margin: 0;
   }

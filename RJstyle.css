@@ -1,0 +1,1610 @@
+/*Default stylings for every webpage*/
+html {
+  background-color: #EEEEEE;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*The Following Content Is For The Logo, Slogan & Navigation Bar*/
+/*--------------------------------------------------------------*/
+
+
+
+/*The Text Styling for each of the navigation options*/
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Arial;
+}
+
+/*Styling for the largest state of the Logo, Slogan & Navigation Bar*/
+@media screen and (min-width: 820px) {
+  /*Ensures the correct position of the Logo-SLogan pair*/
+  div {
+    left: 12.5%;
+  }
+
+  /*Width of the Navigation Bar at its largest state*/
+  #navBar {
+    width: 75%;
+    left: 12.5%;
+  }
+
+  /*The flexible width of each of the navigation bar options at 1/8 of the display width*/
+  .homeOption, .productsOption, .protectOption, .stockistsOption, .eventsOption, .reviewsOption {
+    width: 12.5vw;
+  }
+}
+
+/*Styling for every state of the Logo, Slogan & Navigation Bar other than the smallest*/
+@media screen and (min-width: 650px) {
+  /*Ensures the appropriate position of the slogan on the webpages*/
+  .slogan {
+    position: absolute;
+    right: -18px;
+  }
+
+  /*Ensures the correct line height of the 'Robot Juice' part of the logo*/
+  .robot, .juice {
+    line-height: 1.45;
+  }
+
+  /*The height of the Navigation Bar*/
+  #navBar {
+    height: 80px;
+  }
+
+  /*Styling to increase the height of each of the 6 navigation bar options*/
+  .homeOption, .productsOption, .protectOption, .stockistsOption, .eventsOption, .reviewsOption {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+/*Default styling for every span tag*/
+span {
+  white-space: pre-wrap;
+}
+
+/*Default stylings for the Logo-Slogan pair*/
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 262px;
+  margin: 0.33em;
+  font-size: 32px;
+  position: relative;
+}
+
+/*Default stylings for the 'Robot Juice'*/
+.name {
+  font-weight: 700;
+  border-color:#000000;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/*Ensures the correct size and font for the logo*/
+.robot, .juice {
+  font-family: 'Damion', sans-serif;
+  font-size: 100%;
+}
+
+/*The Default text colour for 'Robot'*/
+.robot {
+  color: #C5110B;
+}
+
+/*The Default text colour for 'Juice'*/
+.juice {
+  color: #000000;
+}
+
+/*When the Header spans the full width of the display*/
+@media screen and (max-width: 820px) {
+  /*Aligns the Logo-Slogan pair to the left*/
+  div {
+    text-align: left;
+  }
+
+  /*Increases the width of each of the navigation options*/
+  .homeOption, .productsOption, .protectOption, .stockistsOption, .eventsOption, .reviewsOption {
+    width: calc(100vw / 6);
+  }
+}
+
+/*The smallest style state of the Logo, Slogan & Navigation Bar*/
+@media screen and (max-width: 650px) {
+  /*Styling for the logo at its smallest state*/
+  #logo {
+    border-color:#C5110B;
+    width: 200px;
+  }
+
+  /*Styling for the logo text at its smallest state*/
+  .robot, .juice {
+      font-size: 32px;
+      line-height: 1.6;
+  }
+
+  /*Styling for the slogan at its smallest state*/
+  .slogan {
+      width: 200px;
+      line-height: 0px;
+      position: absolute;
+      font-size: 11px;
+      left: 23px;
+      bottom: 100px;
+      margin-bottom: 10px;
+  }
+
+  /*Reducing the height of the navigation bar*/
+  #navBar {
+    height: 55px;
+  }
+
+  /*Styling for each of the navigation bar options*/
+  .homeOption, .productsOption, .protectOption, .stockistsOption, .eventsOption, .reviewsOption {
+    text-align:center;
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+  }
+}
+
+/*Default styling for the slogan*/
+.slogan {
+  font-family: Arial;
+  font-size: 11px;
+  color: #333333;
+  bottom: 0;
+}
+
+/*Default styling for the navigation bar*/
+#navBar {
+  border-top: 1px solid #C1BEB9;
+  border-bottom: 1px solid #C1BEB9;
+  padding:0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  position:relative;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+/*Text align styling for all of the navigation options*/
+.homeOption, .productsOption, .protectOption, .stockistsOption, .eventsOption, .reviewsOption {
+  text-align:center;
+}
+
+/*Styling for just the Home Page option*/
+.homeOption {
+  background-color: #C5110B;
+  color: white;
+}
+
+/*The vertical line between each navigation option*/
+.separator {
+  z-index: 1;
+  color:#C5110B;
+  padding: 0;
+  margin:  0;
+  width: 45px;
+  height: 0px;
+  transform: rotate(90deg);
+}
+
+/*Styling for the navigation options when the cursor hovers above them*/
+.homeOption:hover, .productsOption:hover, .protectOption:hover, .stockistsOption:hover, .eventsOption:hover, .reviewsOption:hover {
+  background-color:#000000;
+  color: #FFFFFF;
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*The Following Content Is For The Main Image & Description At The Top Of The Home Page*/
+/*-------------------------------------------------------------------------------------*/
+
+
+
+/*Styling for the main image in the hero area including the large bottom border*/
+#rjImg {
+  border-bottom: solid;
+  border-width: 8px;
+  border-color: grey;
+  /*Ensures the bottom of the navBar is beneath rjImg so that the bottom border is hidden*/
+  margin-top: -1px;
+  z-index: 1;
+}
+
+/*Default styling for the description under the large image at the top of the home page*/
+#rjDesc {
+  font-size: 30px;
+  font-weight:normal;
+  font-family: 'Iceberg', cursive;
+  color: grey;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*The Following Content Is For The Products Section On The Home Page*/
+/*------------------------------------------------------------------*/
+
+
+
+/*For when the 4 images span the full width of the display and are all in one row*/
+@media screen and (min-width: 740.1px) and (max-width: 820.1px) {
+  /*Styling for the products section (the 4 images)*/
+  #products {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100vw;
+    margin: 0 auto;
+    max-width: calc(100vw - 25px);
+  }
+  
+  /*Ensures each of the 4 images takes up 1/4 of the display so that they all are in
+  one row and scale whwn the view width changes*/
+  .large-cell {
+    width: calc(100%/4 - 1em);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0.5em;
+    vertical-align: top;
+  }
+  
+  /*Ensures there is a bottom-right shadow for each of the 4 images that is offset by 4px.*/
+  .large-cell-img {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+  }
+  
+  /*Ensures that when the 4 images span the width of the display each of their descriptions
+  span the same width of each of the images. Also ensures the text aligns to the left*/
+  .large-cell-desc {
+    width: 100%;
+    text-align: left;
+  }
+  
+  /*Ensures the correct size, font weight & font for the name of each of the 4 images*/
+  .large-cell-name {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Iceberg', cursive;
+  }
+}
+
+/*Ensures the rows of 2 large images dont overlap*/
+@media screen and (max-width: 500px) {
+  .large-cell-img {
+    width: 45vw;
+    max-width: 45vw;
+  }
+}
+
+/*Turns the 1 row of 4 images into 2 rows of 2 images*/
+@media screen and (max-width: 740.1px) {
+  /*Ensures the 4 images section still spans the full width of the display*/
+  #products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 100vw;
+  }
+  
+  /*Grows each of the 4 images to take up 50% of the display (from 25%)*/
+  .large-cell {
+    width: calc(50% - 1em);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0.5em;
+    vertical-align: top;
+  }
+
+  /*Creates a bottom-right shadow for each of the 4 images offset by 4px*/
+  .large-cell-img {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  /*Ensures the desciption of each image still spans the width of each image*/
+  .large-cell-desc {
+    width: 100%;
+    text-align: left;
+  }
+  
+  /*The Styling for the names of the 4 images*/
+  .large-cell-name {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Iceberg', cursive;
+  }
+}
+
+/*Ensures, by default, a bottom-right shadow for each of the 4 images offset by 4px*/
+.large-cell-img {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*Ensures, by default, the width of the description spans the width of eahc of the 4 images*/
+.large-cell-desc {
+  width: 100%;
+  text-align: left;
+}
+
+/*Ensures, by default, the following styling options for the names of the 4 images*/
+.large-cell-name {
+  font-size: 25px;
+  font-weight: normal;
+  font-family: 'Iceberg', cursive;
+}
+
+/*When the webpage has a width of 75% of the central width of the display*/
+@media screen and (min-width: 820px) {
+  /*Ensures the products section spans the appropriate width accross the display*/
+  #products {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 75vw;
+    margin: 0 auto;
+    max-width: calc(75vw - 25px);
+  }
+  
+  /*Ensures each of the 4 image articles spans 1/4 of the width of the section*/
+  .large-cell {
+    width: 18.75vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0.5em;
+    vertical-align: top;
+  }
+  
+  /*Ensures there is a shadow to the bottom-right of each of the 4 images that is offset by 4px*/
+  .large-cell-img {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+  }
+  
+  /*Ensures the width of the desciption for each of the 4 images spans the width of each of the 4 images*/
+  .large-cell-desc {
+    width: 100%;
+    text-align: left;
+  }
+
+  /*Ensures the name of each of the 4 images has a font size thatgrows whenthe display width is increased
+  when the display width is greater than 820px*/
+  .large-cell-name {
+    font-size: 2vw;
+  }
+}
+
+/*Ensures that, by default, there is a reduced space between each of the 4 images and their respectuve
+names*/
+.large-cell-img {
+  margin-bottom: -10px;
+}
+
+/*Ensures that, by default, there is a reduced space between each of the 4 image's names and thier
+respective descriptions. Also enusres that the 4 image's names are in bold*/
+.large-cell-name {
+  margin-bottom: -10px;
+  font-weight: bold;
+}
+
+/*Styling for the 4 image's descriptions and ensures a suitable line height for them*/
+.large-cell-desc {
+  font-family: Arial;
+  font-size: 12.0px;
+  line-height: 1.5em;
+}
+
+/*Ensures, by default, there is a line between the 4 images section and the next section*/
+#products {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/*The Following Content Is For Latest News and Poll*/
+/*-------------------------------------------------*/
+
+/*Default styling for the 2 radio buttons in the poll*/
+.radio-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  margin: 20px 0;
+  padding-left: 50px
+}
+
+/*Default styling around each of the 2 radio buttons in the poll*/
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-family: Arial;
+}
+
+/*Default styling directly for each of the 2 radio buttons in the poll*/
+.radio-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #666;
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/*After the radio button has been checked, the background colour darkens*/
+.radio-input:checked {
+  background-color: #ccc;
+}
+
+/*When the cursor hovers over either radio button, the border colour darkens*/
+.radio-input:not(:checked):hover {
+  border-color: #000000;
+}
+
+/*When the 'Latest News' & 'Poll' section span the central 75% of the display*/
+@media screen and (min-width: 820px) {
+  /*Styling for the entire 'Latest News' & 'Poll' section*/
+  #lnandPoll {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(75vw - 25px);
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+
+  /*Set the width of latestNews to be 2/3 of lnandPoll*/
+  #latestNews {
+    width: 66.67%;
+    float: left;
+    padding-right: 70px;
+  }
+
+  /*Set the width of Poll to be 1/3 of lnandPoll*/
+  #poll {
+    width: 33.33%;
+    float: right;
+    padding: 5px;
+  }
+}
+
+/*A state of the 'Latest News' & 'Poll' section where the two areas
+are not side by side but they still have space around them*/
+@media screen and (min-width: 650px) and (max-width: 820px) {
+  /*Styling for the entire section including a width of the full display*/
+  #lnandPoll {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100vw - 25px);
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+
+  /*Styling for 'Latest News' giving the area a width of 100% to span the full width of the display*/
+  #latestNews {
+    width: 100%;
+    float: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+
+  /*Styling for 'Poll' giving the area a width of 100% to span the full width of the display*/
+  #poll {
+    width: 100%;
+    float: right;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/*Default styling for 'Latest News' for the top margin and padding*/
+#lnandPoll {
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+/*Default styling for 'Poll' for the background colour*/
+#poll {
+  background-color: white;
+}
+
+/*Styling for all perminantly visible p tags in the 'Latest News' & 'Poll' section*/
+.lnPtext {
+  font-size: 12.5px;
+  font-family: Arial;
+}
+
+/*Styling for all red text in the 'Latest News' & 'Poll' section*/
+.lnPred {
+  color: #D03C35;
+  /*Between bold and normal*/
+  font-weight: 550;
+}
+
+/*Styling for the 3 dates in the 'Latest News' article*/
+.lnPdate {
+  text-align: right;
+  font-style: italic;
+  font-size: 10px;
+  margin-top: -10px;
+}
+
+/*Styling for the 2 headers in the 'Latest News' & 'Poll' section*/
+.lnPheader {
+  font-family: 'Iceberg', cursive;
+  font-size: 27px;
+}
+
+/*Styling for the 3 News Item titles in the 'Latest News' article*/
+.lnPtitle {
+  font-size: 13px;
+  font-family: Arial;
+  color: #927D7A;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+/*The Following Content Is For The Footer*/
+/*---------------------------------------*/
+
+/*Default styling for the footer in all states*/
+footer {
+  margin: 0;
+  margin-top: 25px;
+  border-top: 1px solid black;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------*/
+/*The Following Content Is For The Top Half Of The Footer*/
+/*-------------------------------------------------------*/
+
+
+/*Default styling for the top half of the footer in all states*/
+#footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  vertical-align: top;
+  color:#C5110B;
+}
+
+/*Default styling for the image of the 'CYCLiNG' magazine, displayed to
+the left in the top half of the footer, in all states*/
+#cycmg-img {
+  width: 15%;
+  height: auto;
+  padding-right: 10%;
+  margin: 1vw;
+}
+
+/*Default styling for the 'Latest Reviews' article in the top half of the footer*/
+#latestReviews {
+  width: 25%;
+  font-family: Arial;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*Default styling for the 'Links' article in the top half of the footer*/
+#links {
+  width: 25%;
+  font-family: Arial;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*Default styling for the links in the 'Links' article in the top half of the footer*/
+#links a {
+  color: #C5110B;
+  text-decoration: underline;
+}
+
+/*Default position styling for the 'Latest Reviews' article in the top half of the footer*/
+#footerTop article:nth-of-type(2) {
+  width: 25%;
+  margin-left: 10%;
+}
+
+/*Default position styling for the 'Links' article in the top half of the footer*/
+#footerTop article:nth-of-type(3) {
+  width: 25%;
+  margin-left: 25%;
+}
+
+/*When the contents of the top half of the footer, only spans the central 75% of the
+display width (Not including the background colour)*/
+@media only screen and (min-width: 820px) {
+  /*Sets the width of the top half of the footer to 75%*/
+  #footerTop {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  /*Appropriate padding for the 'Latest Reviews' article in the largest state of the top
+  half of the footer*/
+  #latestReviews {
+    padding-right: 15%;
+  }
+}
+
+/*When the top half of the footer spans the full width of the display*/
+@media only screen and (max-width: 820px) {
+  /*To prevent the links in the 'Links' article from spanning off screen*/
+  #links {
+    margin-right: 100px;
+  }
+}
+
+/*Default styling for all p tags and a tags in the top half of the footer*/
+#footerTop p , #footerTop a {
+  font-size: 12.75px;
+  font-weight: bold;
+}
+
+/*Default styling for all headings in the top half of the footer*/
+#footerTop h2{
+  font-size: 29px;
+  margin-bottom: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------*/
+/*The Following Content Is For The Bottom Half Of The Footer*/
+/*----------------------------------------------------------*/
+
+
+/*Default stylings for the bottom half of the footer in all states*/
+#footerBot {
+  display: flex;
+  flex-direction: row;
+  background-color: #C8110B;
+  color: white;
+  padding: 10px;
+  height: auto;
+  font-size: 12px;
+  font-family: Arial;
+  color:#000000;
+  font-weight: bold;
+  padding-bottom: 100px;
+}
+
+/*Default stylings for both the left half and right half of the bottom
+half of the footer individually*/
+#leftFB, #rightFB {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/*When the bottom half of the footer only spans the central 75% of the display*/
+@media only screen and (min-width: 820px) {
+  /*Styling for the left half of the bottom half of the footer in its largest state*/
+  #leftFB {
+    width: calc(75vw * 0.65);
+    margin-left: calc(12.5vw - 20px);
+    margin-right: 0;
+  }
+
+  /*Styling for the right half of the bottom half of the footer in its largest state*/
+  #rightFB {
+    width: calc(75vw * 0.35);
+    margin-right: calc(12.5vw - 20px);
+    margin-left: 0;
+  }
+}
+
+/*When the bottom half of the footer spans the full width of the display*/
+@media only screen and (max-width: 820px) {
+  /*Styling for the left half of the bottom half of the footer when it spans the full
+  width of the display*/
+  #leftFB {
+    width: 65vw;
+    margin-left: 0;
+  }
+
+  /*Styling for the right half of the bottom half of the footer when it spans the full
+  width of the display*/
+  #rightFB {
+    width: 35vw;
+    margin-right: 0;
+  }
+}
+
+/*Ensuring a default state of no padding or margins around the second p tag in both the left
+half and right half of the bottom half of the footer*/
+#leftFB p:nth-child(2), #rightFB p:nth-child(2) {
+  margin: 0;
+  padding: 0;
+}
+
+/*Ensuring a default state of no padding or margins, other than a 10px bottom margin, around the first p tag in both the left
+half and right half of the bottom half of the footer*/
+.leftFB p:first-child,
+.rightFB p:first-child {
+  margin: 0 0 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------*/
+/*The Following Content Is For The Products Page Only*/
+/*---------------------------------------------------*/
+
+
+/*-----------------------------------------------------*/
+/*The Following Content Is For The Buy Products Section*/
+/*-----------------------------------------------------*/
+
+/*Default styling for the entire 'Buy Products' section*/
+#buy-products {
+  display: flex;
+  flex-wrap: unset;
+  max-width: 100vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*Larger width where the bottom padding and font size is suitable to increase*/
+@media (min-width: 950px) {
+  /*Ensuring the bottom padding remains at 30px beyond a view width of 950px*/
+  #buy-products {
+    padding-bottom: 30px;
+  }
+
+  /*Incresing the font size within the 'Buy Now' button*/
+  .buy-now-btn {
+    font-size: 20px;
+  }
+}
+
+/*When the 'Buy Products' section spans 75% of the central display but is not in its largest state*/
+@media (min-width: 820px) and (max-width: 950px) {
+  /*Ensuring the correct spacing beneith the section at this state*/
+  #buy-products {
+    margin-bottom: 150px;
+    padding-bottom: 30px;
+  }
+
+  /*Ensuring an appropriate font size for the 'Buy Now' button at this state of the section*/
+  .buy-now-btn {
+    font-size: 15px;
+  }
+}
+
+/*When the 'Buy Products' section spans 100% of the width of the display*/
+@media (max-width: 819.9px) {
+  /*Ensuring an appropriate font size for the 'Buy Now' button at this state*/
+  .buy-now-btn {
+    font-size: 20px;
+  }
+
+  /*Ensuring the correct ratio of the width of the products information as to not overlap
+  beyound appropriate boundaries*/
+  .product-info {
+    max-width: 25%;
+  }
+  
+  /*Styling for the whole section in this state*/
+  #buy-products {
+    width: calc(100vw);
+    padding: 3px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /*Styling for the main tag in this state of the display*/
+  .main-container-prod-page {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+}
+
+/*When the contents of the webpage spans the central 75% of the width of the display*/
+@media (min-width: 820px) {
+  /*Styling for the main tag in this state of the display*/
+  .main-container-prod-page {
+    display: flex;
+    justify-content: left;
+    justify-self: left;
+    width: 100vw;
+    margin-left: 12.5vw;
+    flex-wrap: wrap;
+  }
+
+  /*Ensures the appropriate styling for the 'Buy Products' section in this state of the display*/
+  #buy-products {
+    width: calc(75% - 60px);
+    justify-self: center;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-height: 400px;
+    left: 12.5vw;
+    padding-top: 30px;
+  }
+}
+
+/*Default styling for the 3 image options article as the left-most column of the 'Buy Products' section*/
+#image-options {
+  width: 10vw;
+  padding: 2%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+/*Default styling for the 3 image options in the left-most column of the 'Buy Products' section*/
+#image-options a img {
+  display: block;
+  margin: 2px;
+  padding: 0;
+  border: 1px solid #C5110B;
+}
+
+/*Default styling for the 3 image options in the left-most column of the 'Buy Products' section
+(The images themselves)*/
+#image-options img {
+  width: 7.5vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/*Default styling for the larger selected image article*/
+#selected-image {
+  width: 100%;
+  max-width: calc(50vw);
+  box-sizing: border-box;
+  overflow: visible;
+  margin-left: 5px;
+  justify-content: center;
+}
+
+/*Default styling for the larger selected image itself*/
+#selected-image img {
+  width: 85%;
+  height: auto;
+  display: block;
+  border: 3px solid white;
+}
+
+/*When the display width increases to a point that the selected image is too large for the section bounds*/
+@media (min-width: 1300px) {
+  /*Styling for the selected image section in this state of the display*/
+  #selected-image {
+    width: calc(700px - 8vw);
+    max-width: calc(700px - 8vw);
+  }
+}
+/*When the display increases to a point where the 3 image options take up to much space (height) for the top portion of the products page*/
+@media (min-width: 1600px) {
+  /*After this threshold, the 3 image option images will begin to slowly decrease in size*/
+  #image-options img {
+    width: calc(120px - calc(3.25vw - 52px));
+  }
+}
+
+/*Default styling for the product info*/
+.product-info {
+  width: 36%;
+  margin-left: calc(3% - 15px);
+  margin-right: calc(3% - 15px);
+}
+
+/*Default styling for the product title*/
+.product-title {
+  font-family: 'Iceberg';
+  color: black;
+}
+
+/*Default styling for the product price*/
+.product-price {
+  font-family: 'Arial';
+  font-size: 17.5px;
+  color: #C5110B;;
+}
+
+/*Default styling for the 2 product dropdowns*/
+.product-dropdowns {
+  display: flex;
+  gap: 5px;
+}
+
+/*A state where the 2 dropdown boxes are aligned verticlly rather than side-by-side*/
+@media only screen and (max-width: 1020px) {
+  /*Styling for each of the 2 dropdown boxes in this state of the display*/
+  .product-dropdowns {
+    flex-direction: column;
+    flex-basis: 100%;
+    width: calc(200% - 2.5px);
+  }
+}
+
+/*Default styling for each of the 2 product dropdowns*/
+.product-dropdown {
+  flex-basis: 50%;
+  padding: 10px;
+  border-radius: 4px;
+  border-width: 1.5px;
+  border-color: #000000;
+  background: linear-gradient(to top, #E3E3E3, #FDFDFD);
+  font-weight: bold;
+  width: calc(50% - 2.5px);
+}
+
+/*Default styling when the cursor hovers over either of the 2 dropdown boxes*/
+.product-dropdown:hover {
+  background: linear-gradient(to top, #7d7d7d, #a4a4a4);
+  cursor: pointer;
+}
+
+/*Default font styling for the two dropdown boxes*/
+.product-dropdown option {
+  font-weight: bold;
+  font-family: Arial;
+}
+
+/*Default position, alignment & size styling for the 'Buy Now' article*/
+#buy-now {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*Default styling for the 'Buy Now' button*/
+.buy-now-btn {
+  background-color: #C8110B;
+  color: white;
+  width: calc(100% - 40px);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 0;
+  display: inline-block;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+/*Default styling forwhen the 'buy Now' button is clicked*/
+.buy-now-btn.clicked {
+  background-color: black;
+}
+
+/*Default styling for when the cursor hovers over the 'Buy Now' button*/
+.buy-now-btn:hover {
+  background-color: #a00e09;
+}
+
+/*Default styling for when there is focus on the 'Buy Now' button*/
+.buy-now-btn:focus {
+  outline: none;
+}
+
+/*Default styling for the product info p tag*/
+.product-info p{
+  margin-top: -15px;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+/*Default styling for the 'Share Container'*/
+#share-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: Arial;
+}
+
+/*Default styling for the text within 'Share Container'*/
+.share-container-text {
+  font-weight: bold;
+  color: grey;
+}
+
+/*Default styling for the 3 'SHARE' image links*/
+#share-container span {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  margin-top: -5px;
+}
+
+/*Default styling for each of the 3 'SHARE' image links individually*/
+#share-container span img {
+  width: calc(1em - 4px);
+  height: calc(1em - 4px);
+  margin-left: 0.5em;
+  margin-top: 10px;
+}
+
+/*Default styling for the 'Share Container' header and 'Find Nearest Stockist' text*/
+.share-container-text, #find-nearest-stockist {
+  margin: 0;
+  font-size: 12.5px;
+  margin-top: 10px;
+}
+
+/*A state where the space between the 'Find Nearest Stockist' & 'SHARE' is reduced*/
+@media screen and (max-width: 480px) {
+  /*Ensuring the flex direction is column in this state of the display*/
+  #share-container {
+    flex-direction: column;
+  }
+
+  /*Ensuring the space above the 'Share Container is increased in this state of the display'*/
+  #share-container span {
+    margin-top: 0.5em;
+  }
+}
+
+/*Default styling for the p tag in the 'Share Container'*/
+#share-container p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: Arial;
+  font-size: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-right: -20px;
+}
+
+/*When parts of the third column in the 'Buy Products' section span beneith the rest of the section*/
+@media screen and (max-width: 580px) {
+  /*Ensuring the 'Buy Now' button spans the entire width of the section in this state of the display*/
+  .buy-now-btn {
+    width: 92.5vw;
+    margin-left: -67.5vw;
+  }
+
+  /*Ensuring the p tag in the 'Share Container' spans the full width of the section in this state of the display*/
+  #share-container p {
+    width: 92.5vw;
+    margin-left: -65vw;
+    font-size: 12.5px;
+  }
+
+  /*Ensuring the p tag in the 'Share Container' spans the full width of the section in this state of the display*/
+  #find-nearest-stockist {
+    text-align: left;
+    width: 92.5vw;
+    margin-left: -67.5vw;
+  }
+  
+  /*Ensuring the span tag in the 'Share Container' spans the full width of the section in this state of the display*/
+  .share-container span {
+    text-align: right;
+    margin-top: 10px;
+    width: 92.5vw;
+    margin-left: -67.5vw;
+  }
+  
+  /*Ensuring the 'Share Container' allows its components to span the full width of the section in this state of the display*/
+  .share-container {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/*Defaul styling for the 'Find Nearest Stockist' text*/
+#find-nearest-stockist {
+  color: grey;
+  text-align: right;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: -25px;
+}
+
+/*Default styling for when the cursor hovers above the 'Find Nearest Stockist' text*/
+#find-nearest-stockist:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------*/
+/*The Following Content Is For The Similar Products Section*/
+/*---------------------------------------------------------*/
+
+/*When the contents of similar products only spans the central 75% of the display width*/
+@media screen and (min-width: 820px) {
+  /*Ensures that the entire section has the correct width and positioning in this state of the display*/
+  .similar-products {
+    max-width: calc(75vw - 69px);
+    width: calc(75vw - 69px);
+    justify-content: center;
+  }
+
+  /*Styling for the container for the 6 similar product images for this state of the display*/
+  .image-container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /*Styling for each of the 6 images in the similar products container*/
+  .image-container img {
+    width: 10.5vw;
+    height: 10.5vw;
+  }
+}
+
+/*Where the similar products section spans the full wdith of the display*/
+@media screen and (max-width: 820px) {
+  /*Styling for the entire section in this state of the display*/
+  .similar-products {
+    max-width: calc(100vw - 70px);
+    width: calc(100vw - 70px);
+    justify-content: center;
+    margin-left: -30px;
+  }
+
+  /*Styling for the container for the 6 similar product images for this state of the display*/
+  .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /*Styling for each of the 6 images in the similar products container*/
+  .image-container img {
+    width: 27vw;
+    height: 27vw;
+    margin-bottom: 10px;
+  }
+}
+
+/*Default styling for the entire section*/
+.similar-products {
+  padding: 20px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+/*Default styling for all headers in the section*/
+.similar-products h2 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Iceberg', cursive;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-left: -1.5vw;
+}
+
+/*Default styling for the container with the 6 similar product images*/
+.image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Default styling for each of the 6 similar product images*/
+.image-container img {
+  height: auto;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------*/
+/*The Following Content Is For The Reviews Section*/
+/*------------------------------------------------*/
+
+/*Where the contents of the reviews section only spans the central 75% of the display width*/
+@media screen and (min-width: 820px) {
+  /*Styling for the heading in the reviews section*/
+  #reviews h2 {
+    width: calc(75vw - 29px);
+    border-bottom: 1px solid #c1beb9;
+    margin-left: 12.5vw;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+
+  /*Styling for each review in this state of the display*/
+  .review {
+    max-width: calc(75vw - 30px);
+    margin-left: 12.5vw;
+    height: auto;
+  }
+
+  /*Styling for each review text in this state of the display*/
+  .review .text {
+    width: calc(50% - 50px);
+    flex: 1;
+    white-space: normal;
+    position: relative;
+    margin-left: -5vw;
+    max-width: calc(50% - 50px);
+    align-self: start;
+    height: 3rem;
+    font-size: calc(1vw + 1px);
+  }
+
+  /*Styling for each paragraph of text that accompanies the review text in this state of the display*/
+  #review-extra-info {
+    padding-left: 30vw;
+    margin-top: auto;
+    margin-right: 0;
+    margin-top: calc(-4rem);
+  }
+
+  /*Styling for each of the profile pictures in this state of the display*/
+  .profile-pic {
+    margin-left: 7vw;
+  }
+}
+
+/*When the reviews section spans the full width of the display*/
+@media screen and (max-width: 820.01px) {
+  /*Ensuring the heading for the reviews spans the full view width in this state of the display*/
+  #reviews h2 {
+    width: 100vw;
+    border-bottom: 1px solid #c1beb9;
+  }
+
+  /*Styling for the entire reviews section in this sta5te of the display*/
+  #reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/*A margin for each profile picture that scales with the display width when in this state of the display*/
+  .profile-pic {
+    margin-left: 2vw;
+  }
+}
+
+/*Default styling for the text within the review (The actual review itself)*/
+.review .text {
+    width: calc(50% - 50px);
+    flex: 1;
+    white-space: normal;
+    position: relative;
+    max-width: calc(50% - 50px);
+    align-self: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*Default styling for each review article*/
+.review {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #c1beb9;
+    height: auto;
+    font-family: Arial;
+}
+
+/*Ensuring that, in the 5 profile picture repeating pattern, the 2nd and 5th profile picture,
+in the pattern, have pointed corners*/
+.review:nth-child(5n + 1) .profile-pic,
+.review:nth-child(5n + 4) .profile-pic {
+    border-radius: 0;
+}
+
+/*Ensuring that, in the 5 profile picture repeating pattern, the 1st, 3rd and 4th profile picture,
+in the pattern, have rounded corners*/
+.review:nth-child(5n + 2) .profile-pic,
+.review:nth-child(5n + 3) .profile-pic,
+.review:nth-child(5n) .profile-pic {
+    border-radius: 10%;
+}
+
+/*Default styling for the rating score*/
+.rating {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Iceberg', cursive;
+}
+
+/*Default styling for the 5 rating stars*/
+.rating span {
+    color: #252525;
+}
+
+/*Default styling for the awarded rating out of 5 stars*/
+.rating span.red-stars {
+    color: #C5110B;
+}
+
+/*Default styling for each profile picture for each review*/
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*Default styling for both the 'Read All Reviews' and 'Hide More Reviews' buttons*/
+#read-more-button,
+#hide-more-button {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+/*Ensuring the hidden class means there is no display*/
+.hidden {
+    display: none;
+}
+
+/*Default styling for the accompanying paragraph to each review*/
+#review-extra-info {
+    line-height: 10px;
+    font-size: 10px;
+}
+
+/*Default styling for the 'Product Reviews' heading*/
+#reviews h2 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Iceberg', cursive;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+/*Default styling for both the 'Read All Reviews' and 'Hide More Reviews' buttons*/
+#read-more-button, #hide-more-button {
+  margin-top: 10px;
+  align-self: center;
+  background-color: #C5110B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+}
+
+/*Default styling for both the 'Read All Reviews' and 'Hide More Reviews' buttons when
+hovered over by the cursor*/
+#read-more-button:hover, #hide-more-button:hover {
+  align-self: center;
+  background-color: #a00e09;
+}
